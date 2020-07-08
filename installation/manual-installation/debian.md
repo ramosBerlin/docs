@@ -104,15 +104,15 @@ PORT=3000
 Setup storage engine and replication for MongoDB \(mandatory for versions &gt; 1\), and enable and start MongoDB and Rocket.Chat:
 
 ```bash
-sudo sed -i "s/^#  engine:/  engine: wiredTiger/"  /etc/mongod.conf
+sudo sed -i "s/^#  engine:/  engine: wiredTiger/"  /etc/mongodb.conf
 ```
 
 ```bash
-sudo sed -i "s/^#replication:/replication:\n  replSetName: rs01/" /etc/mongod.conf
+sudo sed -i "s/^#replication:/replication:\n  replSetName: rs01/" /etc/mongodb.conf
 ```
 
 ```bash
-sudo systemctl enable mongod && sudo systemctl start mongod
+sudo systemctl enable mongodb && sudo systemctl start mongod
 ```
 
 ```bash
